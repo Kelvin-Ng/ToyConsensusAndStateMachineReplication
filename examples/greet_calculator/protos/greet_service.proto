@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service GreetService {
+    rpc english(GreetRequest) returns(GreetReply) {}
+    rpc chinese(GreetRequest) returns(GreetReply) {}
+    rpc japanese(GreetRequest) returns(GreetReply) {}
+}
+
+message GreetRequest {
+    string name = 1;
+}
+
+message GreetReply {
+    string greet = 1;
+}
+

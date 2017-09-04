@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+service CalculatorService {
+    rpc add(CalculatorBinaryRequest) returns(CalculatorReply) {}
+    rpc minus(CalculatorBinaryRequest) returns(CalculatorReply) {}
+    rpc multiply(CalculatorBinaryRequest) returns(CalculatorReply) {}
+    rpc division(CalculatorBinaryRequest) returns(CalculatorReply) {}
+    rpc square(CalculatorUnaryRequest) returns(CalculatorReply) {}
+}
+
+message CalculatorBinaryRequest {
+    double x = 1;
+    double y = 2;
+}
+
+message CalculatorUnaryRequest {
+    double x = 1;
+}
+
+message CalculatorReply {
+    double z = 1;
+}
+

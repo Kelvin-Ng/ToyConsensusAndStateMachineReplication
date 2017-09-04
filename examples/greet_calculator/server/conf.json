@@ -1,0 +1,4 @@
+{
+    "listen_endpoints": ["127.0.0.1:12345"],
+    "num_thr_calculator": 2
+}
